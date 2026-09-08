@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111c">
+<meta name="description" content="S1 Technology Services — premium doorstep home appliance repair in Pimpri-Chinchwad. Washing machine, refrigerator and microwave repair. Visit charge ₹249.">
+<meta name="keywords" content="washing machine repair Pimpri Chinchwad,refrigerator repair Pimpri,microwave repair PCMC,home appliance repair Pimpri Colony">
+<title>S1 Technology Services | Home Appliance Repair • Pimpri-Chinchwad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+:root{
+ --navy:#06111b;--navy2:#0b1b29;--navy3:#10283a;--ink:#101923;--muted:#657384;
+ --gold:#d8b467;--gold2:#f3dda2;--cyan:#54d9e9;--green:#16c77e;--cream:#faf8f2;
+ --line:#e7e9eb;--white:#fff;--container:1200px;--shadow:0 28px 80px rgba(4,20,34,.12)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;z-index:10000;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),#fff,var(--cyan),transparent)}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
+img{display:block;width:100%;max-width:100%}
+.container{width:min(var(--container),calc(100% - 42px));margin:auto}
+.section{padding:105px 0;position:relative;overflow:hidden}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(184,145,66,.27);background:#fffaf0;color:#8b692f;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.section-head{max-width:780px;text-align:center;margin:0 auto 50px}
+.section-head h2,.copy h2,.contact-info h2,.cta h2{font-family:"Manrope",sans-serif;font-weight:800;letter-spacing:-.055em;line-height:1.05}
+.section-head h2{font-size:clamp(35px,4.7vw,57px);margin:15px 0 14px}
+.section-head p{color:var(--muted);font-size:15px;max-width:680px;margin:auto}
+
+/* NAV */
+.nav{position:fixed;z-index:9999;top:0;left:0;right:0;background:rgba(6,17,27,.76);border-bottom:1px solid rgba(216,180,103,.16);backdrop-filter:blur(20px);transition:.3s}
+.nav.scrolled{background:rgba(5,13,21,.96);box-shadow:0 16px 50px rgba(0,0,0,.24)}
+.nav-inner{min-height:80px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.logo{width:45px;height:45px;flex:0 0 45px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--gold2),#b6873d);color:#07131d;box-shadow:0 9px 30px rgba(216,180,103,.22)}
+.logo i{font-size:18px}
+.brand-text strong{display:block;color:#fff;font:800 16px/1 "Manrope"}
+.brand-text span{display:block;color:#8fa1b2;font-size:8px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-top:6px}
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none}
+.nav-links a{display:flex;align-items:center;gap:7px;color:#c7d2dc;padding:10px 10px;border-radius:10px;font-size:11px;font-weight:800}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(216,180,103,.08)}
+.nav-links a.active:after{content:"";position:absolute}
+.nav-book{background:linear-gradient(135deg,var(--gold2),#b9873d)!important;color:#07131d!important;box-shadow:0 9px 27px rgba(216,180,103,.18)}
+.phone-top{display:flex;align-items:center;gap:8px;color:#fff;border:1px solid rgba(216,180,103,.2);padding:6px 10px 6px 6px;border-radius:13px}
+.phone-top i{width:33px;height:33px;display:grid;place-items:center;border-radius:10px;background:rgba(216,180,103,.1);color:var(--gold2)}
+.phone-top small{display:block;color:#8295a7;font-size:7px;text-transform:uppercase;font-weight:800}
+.phone-top b{font-size:10px}
+.menu{display:none;width:43px;height:43px;border:1px solid rgba(255,255,255,.15);background:transparent;border-radius:12px}
+.menu span{display:block;width:19px;height:2px;background:#fff;margin:4px auto;border-radius:2px}
+
+/* HERO */
+.hero{min-height:850px;padding:165px 0 90px;color:#fff;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 75% 22%,rgba(216,180,103,.19),transparent 23%),
+ radial-gradient(circle at 88% 78%,rgba(84,217,233,.12),transparent 26%),
+ linear-gradient(135deg,#03080d,#091a29 57%,#06131e)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.16;background-image:linear-gradient(rgba(216,180,103,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(216,180,103,.1) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(90deg,#000,transparent 80%)}
+.hero:after{content:"";position:absolute;width:520px;height:520px;right:-250px;top:40px;border:1px solid rgba(216,180,103,.22);border-radius:38% 62% 58% 42%;transform:rotate(25deg);box-shadow:0 0 120px rgba(216,180,103,.07)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.23em;text-transform:uppercase}
+.eyebrow:before,.eyebrow:after{content:"";width:27px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.eyebrow:after{background:linear-gradient(90deg,var(--gold),transparent)}
+.hero-badge{display:inline-flex;gap:8px;align-items:center;margin-top:18px;padding:9px 13px;border:1px solid rgba(216,180,103,.25);background:rgba(216,180,103,.07);color:var(--gold2);border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font:800 clamp(48px,6.2vw,78px)/1.01 "Manrope";letter-spacing:-.067em;margin:22px 0 19px}
+.hero h1 span{background:linear-gradient(105deg,#fff 10%,var(--gold2) 52%,#72e5ef 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-desc{max-width:650px;color:#b4c2ce;font-size:16px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:29px 0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:13px;padding:14px 19px;font-size:12px;font-weight:800;transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),#b98a42);color:#07131d;box-shadow:0 16px 38px rgba(216,180,103,.2)}
+.btn-green{background:linear-gradient(135deg,#2bd995,#0c9e64);color:#fff;box-shadow:0 15px 35px rgba(18,194,119,.17)}
+.btn-outline{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.045);color:#fff}
+.hero-points{display:flex;flex-wrap:wrap;gap:14px;color:#a1b0be;font-size:10px;font-weight:700}
+.hero-points span{display:flex;align-items:center;gap:6px}.hero-points i{color:var(--gold2)}
+.hero-visual{min-height:520px;display:grid;place-items:center;position:relative}
+.ring{position:absolute;width:min(500px,92vw);height:min(500px,92vw);border-radius:50%;border:1px solid rgba(216,180,103,.21);background:radial-gradient(circle,rgba(216,180,103,.13),rgba(84,217,233,.025) 55%,transparent 73%);animation:spin 25s linear infinite}
+.ring:before,.ring:after{content:"";position:absolute;border:1px dashed rgba(216,180,103,.19);border-radius:50%}
+.ring:before{inset:43px}.ring:after{inset:94px}
+.orb{width:min(370px,76vw);height:425px;position:relative;z-index:2;border-radius:32px;padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.035));border:1px solid rgba(243,221,162,.22);backdrop-filter:blur(18px);box-shadow:0 45px 115px rgba(0,0,0,.4);animation:float 6s ease-in-out infinite}
+.orb-top{display:flex;justify-content:space-between;color:#8ea2b4;font-size:9px;font-weight:800;letter-spacing:.11em}
+.available{color:#66e0ae;display:flex;gap:6px;align-items:center}.available:before{content:"";width:6px;height:6px;border-radius:50%;background:#66e0ae;box-shadow:0 0 13px #66e0ae}
+.orb-screen{height:245px;margin:19px 0;border-radius:23px;border:1px solid rgba(216,180,103,.2);display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,rgba(216,180,103,.2),rgba(4,15,24,.9) 68%);position:relative;overflow:hidden}
+.orb-screen i{font-size:90px;color:var(--gold2);filter:drop-shadow(0 12px 32px rgba(216,180,103,.25))}
+.screen-ring{position:absolute;width:145px;height:145px;border:1px solid rgba(255,255,255,.11);border-radius:50%;animation:spin 9s linear infinite}
+.orb-title{font:800 20px/1 "Manrope";letter-spacing:-.03em}.orb-sub{font-size:9px;color:#8397a9;margin-top:7px;letter-spacing:.06em}
+.float-card{position:absolute;z-index:4;padding:11px 13px;display:flex;align-items:center;gap:9px;border:1px solid rgba(216,180,103,.2);border-radius:15px;background:rgba(255,255,255,.97);color:#101923;box-shadow:0 20px 50px rgba(0,0,0,.25);font-size:9px;font-weight:800}
+.float-card i{width:35px;height:35px;display:grid;place-items:center;border-radius:10px;background:#fff6df;color:#9a7133}
+.float-card small{display:block;color:#718091;font-size:7px;margin-top:2px}.fc1{right:-4px;top:55px}.fc2{left:-15px;bottom:105px}.fc3{right:13px;bottom:25px}
+@keyframes spin{to{transform:rotate(360deg)}} @keyframes float{50%{transform:translateY(-10px)}}
+
+/* QUICK INFO */
+.quick{background:#fff;border-bottom:1px solid #e9e2d3;box-shadow:0 13px 40px rgba(10,24,38,.04)}
+.quick-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr)}
+.quick-item{padding:24px 18px;border-right:1px solid #eee7db;display:flex;align-items:center;gap:11px}
+.quick-item:last-child{border:0}
+.quick-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#fff9eb,#f1dfba);color:#956d2e}
+.quick-item strong{display:block;font:800 12px/1.2 "Manrope"}.quick-item span{display:block;color:var(--muted);font-size:9px;margin-top:4px}
+.price strong{font-size:16px;color:#8b652b}.price span{color:#68798a}
+
+/* ABOUT */
+.about{background:radial-gradient(circle at 2% 30%,rgba(216,180,103,.09),transparent 23%),#fff}
+.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:72px;align-items:center}
+.about-visual{min-height:520px;border-radius:32px;overflow:hidden;position:relative;background:#101a23;box-shadow:var(--shadow)}
+.about-visual img{height:520px;object-fit:cover}
+.about-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(2,10,17,.9))}
+.frame{position:absolute;z-index:2;inset:15px;border:1px solid rgba(255,255,255,.25);border-radius:23px}
+.about-badge{position:absolute;z-index:3;left:21px;bottom:21px;padding:16px 18px;border-radius:17px;background:rgba(4,11,17,.92);border:1px solid rgba(216,180,103,.25);color:#fff;backdrop-filter:blur(13px)}
+.about-badge b{display:block;font:800 25px/1 "Manrope";color:var(--gold2)}.about-badge span{display:block;color:#aebcca;font-size:9px;margin-top:5px}
+.copy h2{font-size:clamp(35px,4.4vw,53px);margin:14px 0 18px}.copy p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:12px}
+.point-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:23px 0}
+.point{padding:13px;border:1px solid #ece4d6;border-radius:13px;background:linear-gradient(145deg,#fff,#fbf8f1);font-size:11px;font-weight:700}
+.point i{color:#ad8238;margin-right:7px}
+.note{padding:16px 18px;border-left:3px solid var(--gold);border-radius:0 14px 14px 0;background:linear-gradient(90deg,#fff9ed,#f7fbfd);color:#73582e;font-size:11px;font-weight:700}
+
+/* SERVICES */
+.services{background:linear-gradient(180deg,#f8f5ed,#f4f8fa)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.service{background:#fff;border:1px solid rgba(151,116,54,.14);border-radius:24px;overflow:hidden;box-shadow:0 17px 50px rgba(10,28,43,.07);transition:.3s;display:flex;flex-direction:column}
+.service:hover{transform:translateY(-8px);box-shadow:0 30px 75px rgba(10,28,43,.13);border-color:rgba(184,140,63,.3)}
+.service-img{height:185px;position:relative;overflow:hidden}.service-img img{height:100%;object-fit:cover;transition:.5s}.service:hover img{transform:scale(1.06)}
+.service-img:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,12,19,.75),transparent 64%)}
+.tag{position:absolute;z-index:2;right:12px;top:12px;padding:6px 9px;border-radius:999px;background:rgba(255,250,238,.94);color:#795b2a;font-size:8px;font-weight:800;text-transform:uppercase}
+.service-icon{position:absolute;z-index:2;left:14px;bottom:13px;width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#f3e6c9);color:#936c2c}
+.service-body{padding:21px;display:flex;flex-direction:column;flex:1}.service h3{font:800 17px/1.25 "Manrope";margin-bottom:7px}.service p{font-size:11px;color:var(--muted);line-height:1.7}
+.service-list{list-style:none;display:grid;gap:6px;margin:14px 0 17px}.service-list li{font-size:10px;font-weight:600;color:#344253}.service-list i{color:var(--green);margin-right:6px}
+.service-link{margin-top:auto;padding-top:13px;border-top:1px solid #eee8dc;color:#9a7133;font-size:10px;font-weight:800;display:flex;justify-content:space-between}
+
+/* DIAGNOSIS */
+.diagnosis{background:linear-gradient(135deg,#03080d,#0b1d2b);color:#fff;position:relative}
+.diagnosis:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 25%,rgba(216,180,103,.14),transparent 26%),radial-gradient(circle at 15% 80%,rgba(84,217,233,.07),transparent 25%)}
+.diag-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.diag-copy h2{font:800 clamp(35px,4.4vw,53px)/1.05 "Manrope";letter-spacing:-.055em;margin:15px 0}
+.diag-copy p{color:#aab8c5;font-size:14px;line-height:1.8;margin-bottom:22px}
+.diag-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.diag-list div{padding:13px;border:1px solid rgba(216,180,103,.14);background:rgba(255,255,255,.035);border-radius:13px;color:#d9e2e9;font-size:10px;font-weight:700}.diag-list i{color:var(--gold2);margin-right:7px}
+.diagnostic-panel{min-height:430px;border:1px solid rgba(216,180,103,.18);border-radius:29px;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 43%,rgba(216,180,103,.12),transparent 48%),rgba(255,255,255,.025)}
+.core{width:210px;height:210px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(216,180,103,.3);box-shadow:0 0 100px rgba(216,180,103,.1);position:relative}
+.core:before{content:"";position:absolute;inset:17px;border:1px dashed rgba(216,180,103,.35);border-radius:50%;animation:spin 14s linear infinite}.core i{font-size:67px;color:var(--gold2)}
+.node{position:absolute;padding:10px 12px;border:1px solid rgba(216,180,103,.17);background:rgba(3,10,18,.88);border-radius:12px;color:#d4dee7;font-size:9px;font-weight:800}.n1{top:30px;left:26px}.n2{top:46px;right:23px}.n3{bottom:45px;left:23px}.n4{bottom:31px;right:25px}
+
+/* WHY */
+.why{background:#fff}.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:62px;align-items:center}.reasons{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.reason{padding:22px;border:1px solid rgba(184,140,63,.14);border-radius:19px;background:linear-gradient(145deg,#fff,#fbf8f1);box-shadow:0 16px 45px rgba(10,30,50,.05);transition:.25s}
+.reason:hover{transform:translateY(-5px);box-shadow:0 25px 58px rgba(10,30,50,.09)}.reason i{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#fff8e9,#f1e2c4);color:#956c2d;margin-bottom:13px}
+.reason h3{font:800 14px "Manrope";margin-bottom:5px}.reason p{font-size:10px;color:var(--muted);line-height:1.65}
+
+/* AREAS */
+.areas{background:linear-gradient(180deg,#f8f6f0,#f4f8fa)}
+.area-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:stretch}
+.area-info{padding:38px;border-radius:27px;background:linear-gradient(145deg,#07131d,#0d2332);color:#fff;position:relative;overflow:hidden}
+.area-info:after{content:"";position:absolute;width:240px;height:240px;right:-100px;bottom:-100px;border:1px solid rgba(216,180,103,.2);border-radius:50%}
+.area-info h2{font:800 clamp(32px,4vw,47px)/1.05 "Manrope";letter-spacing:-.05em;margin:15px 0}
+.area-info p{color:#aebbc7;font-size:12px;line-height:1.8}.area-pin{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(216,180,103,.1);color:var(--gold2);border:1px solid rgba(216,180,103,.2)}
+.area-chips{padding:34px;border:1px solid rgba(184,140,63,.14);border-radius:27px;background:#fff;box-shadow:0 18px 55px rgba(10,28,43,.06);display:flex;flex-wrap:wrap;align-content:flex-start;gap:9px}
+.chip{padding:10px 13px;border-radius:999px;background:#faf7ef;border:1px solid #e9dec7;color:#5f4b2c;font-size:10px;font-weight:800}
+.area-note{width:100%;margin-top:12px;color:#7a8692;font-size:10px}
+
+/* PROCESS */
+.process{background:#fff}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{padding:23px;border:1px solid rgba(184,140,63,.14);border-radius:20px;background:linear-gradient(145deg,#fff,#fbf9f4);box-shadow:0 14px 42px rgba(10,30,50,.05);position:relative}
+.step-no{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#fff8e8,#f0e0bd);color:#90692f;font:800 11px "Manrope";margin-bottom:16px}
+.step h3{font:800 14px "Manrope";margin-bottom:6px}.step p{font-size:10px;color:var(--muted);line-height:1.65}
+.step:not(:last-child):after{content:"→";position:absolute;right:-15px;top:37px;width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#fffaf0;border:1px solid #e5d5b5;color:#a27835;z-index:2}
+
+/* CONTACT */
+.contact{background:radial-gradient(circle at 8% 45%,rgba(216,180,103,.09),transparent 23%),#fff}
+.contact-shell{display:grid;grid-template-columns:.8fr 1.2fr;border-radius:30px;overflow:hidden;border:1px solid rgba(184,140,63,.18);box-shadow:0 35px 95px rgba(5,20,35,.12)}
+.contact-info{padding:48px;background:radial-gradient(circle at 78% 15%,rgba(216,180,103,.16),transparent 30%),linear-gradient(145deg,#03080d,#0b1d2b);color:#fff}
+.contact-info h2{font-size:clamp(33px,4.2vw,49px);margin:15px 0}.contact-info>p{color:#a9b7c4;font-size:12px;line-height:1.75}
+.contact-points{list-style:none;display:grid;gap:16px;margin-top:28px}.contact-points li{display:flex;gap:11px;color:#dce4ea;font-size:10px}.contact-points i{color:var(--gold2);width:17px;margin-top:3px}.contact-points strong{font-size:11px}
+.contact-form{padding:42px;background:linear-gradient(145deg,#fff,#fbf9f4)}
+.form-head{margin-bottom:20px}.form-head h3{font:800 22px "Manrope";letter-spacing:-.035em}.form-head p{font-size:10px;color:var(--muted);margin-top:4px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+.field label{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#5d6c7c}
+.field input,.field select,.field textarea{width:100%;border:1px solid #e2e5e7;border-radius:11px;background:#f8fafb;padding:12px 13px;outline:0;color:var(--ink);font-size:11px;transition:.2s}
+.field textarea{min-height:105px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#d2ad62;background:#fff;box-shadow:0 0 0 3px rgba(216,180,103,.13)}
+.submit{width:100%;margin-top:15px}.form-note{text-align:center;color:var(--muted);font-size:8px;margin-top:8px}
+
+/* FAQ */
+.faq{background:linear-gradient(180deg,#f8f6f0,#f3f7fa)}.faq-grid{max-width:880px;margin:auto;display:grid;gap:9px}
+.faq-item{background:#fff;border:1px solid rgba(184,140,63,.13);border-radius:15px;overflow:hidden}.faq-q{width:100%;border:0;background:linear-gradient(145deg,#fff,#fbf9f4);padding:16px 18px;text-align:left;display:flex;justify-content:space-between;align-items:center;color:var(--ink);font-size:11px;font-weight:800}.faq-q i{color:#a17636;transition:.25s}
+.faq-a{max-height:0;overflow:hidden;padding:0 18px;color:var(--muted);font-size:10px;line-height:1.7;transition:.3s}.faq-item.open .faq-a{max-height:180px;padding:0 18px 16px}.faq-item.open .faq-q i{transform:rotate(180deg)}
+
+/* CTA + FOOTER */
+.cta-section{padding:85px 0 105px;background:#fff}.cta{position:relative;overflow:hidden;border:1px solid rgba(216,180,103,.2);border-radius:33px;padding:65px;background:radial-gradient(circle at 84% 20%,rgba(243,221,162,.2),transparent 25%),radial-gradient(circle at 70% 85%,rgba(84,217,233,.08),transparent 25%),linear-gradient(135deg,#03080d,#0a1c2c);color:#fff;box-shadow:0 40px 110px rgba(4,15,27,.17)}
+.cta:before{content:"";position:absolute;inset:14px;border:1px solid rgba(216,180,103,.13);border-radius:24px;pointer-events:none}
+.cta h2{font-size:clamp(34px,4.5vw,53px);max-width:760px}.cta p{color:#a9b8c5;max-width:680px;margin:13px 0 25px;font-size:13px}.cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+footer{background:radial-gradient(circle at 14% 0,rgba(216,180,103,.1),transparent 25%),linear-gradient(180deg,#03070c,#010409);color:#8799aa;border-top:1px solid rgba(216,180,103,.2);padding:76px 0 25px;position:relative}
+.footer-grid{display:grid;grid-template-columns:1.35fr .8fr .8fr 1fr;gap:35px}.footer-brand h3{font:800 21px "Manrope";background:linear-gradient(90deg,#fff,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-brand p{font-size:10px;line-height:1.75;margin:12px 0 17px;max-width:390px}.footer-title{color:var(--gold2);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;margin-bottom:14px}
+.footer-links{list-style:none;display:grid;gap:8px}.footer-links a,.footer-links span{font-size:10px}.footer-links a:hover{color:var(--gold2)}
+.socials{display:flex;gap:8px;margin-top:17px}.socials a{width:35px;height:35px;border-radius:10px;display:grid;place-items:center;border:1px solid rgba(216,180,103,.16);background:rgba(255,255,255,.025)}.socials a:hover{background:var(--gold);color:#071018}
+.footer-bottom{border-top:1px solid rgba(216,180,103,.12);margin-top:48px;padding-top:19px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:8px}
+.floating{position:fixed;z-index:9998;right:max(13px,env(safe-area-inset-right));bottom:max(13px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:9px}.float-btn{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 13px 30px rgba(0,0,0,.25);font-size:19px;transition:.25s}.float-btn:hover{transform:translateY(-3px) scale(1.04)}.wa{background:#15b978}.call{background:linear-gradient(145deg,var(--gold2),#b98c43);color:#071018}
+
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(20px);transition:.75s ease}.reveal.active{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(16px)}.stagger.active>*{animation:rise .55s forwards}
+.stagger.active>*:nth-child(2){animation-delay:.07s}.stagger.active>*:nth-child(3){animation-delay:.14s}.stagger.active>*:nth-child(4){animation-delay:.21s}.stagger.active>*:nth-child(5){animation-delay:.28s}.stagger.active>*:nth-child(6){animation-delay:.35s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* RESPONSIVE */
+@media(max-width:1080px){
+ .phone-top{display:none}.nav-links a{padding:9px 8px}
+ .hero-grid,.about-grid,.diag-grid,.why-grid,.area-shell{grid-template-columns:1fr;gap:42px}
+ .hero{padding-top:130px}.hero-copy{text-align:center;margin:auto}.hero-desc{margin:auto}.hero-actions,.hero-points{justify-content:center}
+ .hero-visual{min-height:440px}.services-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+ .container{width:calc(100% - 28px)}.nav-inner{min-height:68px}.logo{width:39px;height:39px;flex-basis:39px}.brand-text strong{font-size:14px}.brand-text span{font-size:7px}
+ .menu{display:block;margin-left:auto;z-index:10001}.nav-links{position:absolute;left:14px;right:14px;top:calc(100% + 8px);display:none;flex-direction:column;align-items:stretch;padding:9px;border:1px solid rgba(216,180,103,.2);background:rgba(5,12,18,.98);border-radius:18px;box-shadow:0 22px 55px rgba(0,0,0,.35);max-height:calc(100svh - 84px);overflow:auto}
+ .nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{width:100%;min-height:44px;justify-content:center;font-size:13px}
+ .section{padding:68px 0}.section-head{margin-bottom:38px}.section-head p{font-size:13px}
+ .hero{min-height:auto;padding:112px 0 58px}.hero-grid{gap:20px}.hero h1{font-size:clamp(42px,12vw,59px);margin:17px 0}.hero-desc{font-size:14px}.hero-actions{flex-direction:column;gap:9px;margin:23px 0 18px}.hero-actions .btn{width:100%;min-height:49px}.hero-points{display:grid;justify-items:center;gap:7px}
+ .hero-visual{min-height:350px;max-width:390px;margin:auto;width:100%}.ring{width:315px;height:315px}.orb{width:248px;height:305px;padding:17px;border-radius:25px}.orb-screen{height:165px;margin:13px 0;border-radius:17px}.orb-screen i{font-size:64px}.screen-ring{width:100px;height:100px}.orb-title{font-size:15px}.orb-sub{font-size:7px}.float-card{max-width:132px;padding:7px 8px;gap:6px;font-size:8px;line-height:1.25;border-radius:12px}.float-card i{width:27px;height:27px;flex-basis:27px;font-size:11px}.float-card small{font-size:6px}.fc1{right:0;top:1%}.fc2{left:0;bottom:17%}.fc3{right:2%;bottom:0}
+ .quick-grid{grid-template-columns:1fr 1fr}.quick-item{padding:17px 11px}.quick-item:nth-child(2){border-right:0}.quick-item:nth-child(-n+2){border-bottom:1px solid #eee7db}.quick-item strong{font-size:10px}.quick-item span{font-size:8px}
+ .about-visual,.about-visual img{min-height:370px;height:370px}.point-grid,.diag-list,.reasons{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.diagnostic-panel{min-height:330px}.process-grid{grid-template-columns:1fr}.step:not(:last-child):after{display:none}.area-shell{gap:17px}.area-info{padding:28px}.area-chips{padding:24px}
+ .contact-shell{grid-template-columns:1fr;border-radius:24px}.contact-info,.contact-form{padding:30px 21px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .cta{padding:45px 24px;border-radius:25px}.cta:before{inset:9px;border-radius:18px}.cta-section{padding:65px 0 78px}.cta-actions .btn{width:100%}
+ .footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:380px){
+ .container{width:calc(100% - 24px)}.hero-visual{min-height:320px}.ring{width:280px;height:280px}.orb{width:218px;height:278px}.orb-screen{height:150px}.float-card{max-width:120px;transform:scale(.92)}.quick-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="navbar">
+ <div class="container nav-inner">
+  <a class="brand" href="#home" aria-label="S1 Technology Services home">
+   <span class="logo"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+   <span class="brand-text"><strong>S1 Technology Services</strong><span>Home Appliance Care • PCMC</span></span>
+  </a>
+  <nav>
+   <ul class="nav-links" id="navLinks">
+    <li><a class="active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="nav-book" href="#contact"><i class="fa-solid fa-calendar-check"></i> Book Service</a></li>
+   </ul>
+  </nav>
+  <a class="phone-top" href="tel:+918983568587"><i class="fa-solid fa-phone"></i><span><small>Call now</small><b>+91 89835 68587</b></span></a>
+  <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="hero-copy reveal">
+   <div class="eyebrow">TRUSTED • LOCAL • DOORSTEP APPLIANCE CARE</div>
+   <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Pimpri-Chinchwad • Maharashtra</div>
+   <h1>Premium appliance repair.<br><span>Right at your doorstep.</span></h1>
+   <p class="hero-desc">S1 Technology Services provides convenient home appliance repair support across Pimpri-Chinchwad — with dedicated service for washing machines, refrigerators and microwave ovens.</p>
+   <div class="hero-actions">
+    <a class="btn btn-gold" href="#contact"><i class="fa-solid fa-calendar-check"></i> Request a Service</a>
+    <a class="btn btn-green" href="https://wa.me/918983568587?text=Hello%20S1%20Technology%20Services%2C%20I%20would%20like%20to%20book%20an%20appliance%20service." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    <a class="btn btn-outline" href="tel:+918983568587"><i class="fa-solid fa-phone"></i> Call Now</a>
+   </div>
+   <div class="hero-points">
+    <span><i class="fa-solid fa-circle-check"></i> Visit charge ₹249</span>
+    <span><i class="fa-solid fa-circle-check"></i> Doorstep support</span>
+    <span><i class="fa-solid fa-circle-check"></i> Multiple appliance categories</span>
+   </div>
+  </div>
+  <div class="hero-visual reveal">
+   <div class="ring"></div>
+   <div class="orb">
+    <div class="orb-top"><span>S1 SERVICE DESK</span><span class="available">AVAILABLE</span></div>
+    <div class="orb-screen"><div class="screen-ring"></div><i class="fa-solid fa-house-circle-check"></i></div>
+    <div class="orb-title">APPLIANCE CARE</div>
+    <div class="orb-sub">WASHING MACHINE • REFRIGERATOR • MICROWAVE</div>
+   </div>
+   <div class="float-card fc1"><i class="fa-solid fa-snowflake"></i><span>Refrigerator<br><small>Cooling & repair support</small></span></div>
+   <div class="float-card fc2"><i class="fa-solid fa-shirt"></i><span>Washing Machine<br><small>Diagnosis & repair</small></span></div>
+   <div class="float-card fc3"><i class="fa-solid fa-bolt"></i><span>Microwave Oven<br><small>Service & fixing</small></span></div>
+  </div>
+ </div>
+</section>
+
+<section class="quick">
+ <div class="container quick-grid">
+  <div class="quick-item price"><div class="quick-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div><div><strong>₹249 Visit Charge</strong><span>Confirm current charges when booking</span></div></div>
+  <div class="quick-item"><div class="quick-icon"><i class="fa-solid fa-house"></i></div><div><strong>Doorstep Service</strong><span>Home visit convenience</span></div></div>
+  <div class="quick-item"><div class="quick-icon"><i class="fa-solid fa-gears"></i></div><div><strong>Technical Support</strong><span>Fault diagnosis & repair</span></div></div>
+  <div class="quick-item"><div class="quick-icon"><i class="fa-solid fa-location-dot"></i></div><div><strong>PCMC Coverage</strong><span>Major localities supported</span></div></div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="container about-grid">
+  <div class="about-visual reveal">
+   <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85" alt="Technician working on appliance repair" loading="lazy">
+   <div class="frame"></div>
+   <div class="about-badge"><b>₹249</b><span>Visit charge • Confirm at booking</span></div>
+  </div>
+  <div class="copy reveal">
+   <span class="kicker"><i class="fa-solid fa-building"></i> About S1 Technology Services</span>
+   <h2>Dependable appliance care, designed around your home.</h2>
+   <p><strong>S1 Technology Services</strong> is a local home-appliance service provider serving Pimpri-Chinchwad and nearby areas in Maharashtra.</p>
+   <p>The website is built around a simple promise: make it easy for customers to identify the right service, share the appliance problem and contact the service team quickly.</p>
+   <div class="point-grid">
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Washing machine repair</div>
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Refrigerator repair</div>
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Microwave oven repair</div>
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Home appliance support</div>
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Doorstep visit</div>
+    <div class="point"><i class="fa-solid fa-circle-check"></i> Local PCMC coverage</div>
+   </div>
+   <div class="note">Transparent communication matters: service scope, parts and final repair requirements should be confirmed after inspection.</div>
+  </div>
+ </div>
+</section>
+
+<section class="section services" id="services">
+ <div class="container">
+  <div class="section-head reveal">
+   <span class="kicker"><i class="fa-solid fa-layer-group"></i> Complete Service Menu</span>
+   <h2>Professional care for essential home appliances.</h2>
+   <p>Choose your appliance and send the details. The service team can review the issue and guide you on the next step.</p>
+  </div>
+  <div class="services-grid stagger">
+   <article class="service">
+    <div class="service-img"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1000&q=85" alt="Washing machine repair" loading="lazy"><span class="tag">01 • Repair</span><span class="service-icon"><i class="fa-solid fa-shirt"></i></span></div>
+    <div class="service-body"><h3>Washing Machine Repair</h3><p>Support for common washing-machine faults and component-related issues.</p><ul class="service-list"><li><i class="fa-solid fa-check"></i> Fault diagnosis</li><li><i class="fa-solid fa-check"></i> Drainage & water issues</li><li><i class="fa-solid fa-check"></i> Component repair support</li><li><i class="fa-solid fa-check"></i> Performance checks</li></ul><a class="service-link" href="#contact">Book washing-machine service <i class="fa-solid fa-arrow-right"></i></a></div>
+   </article>
+   <article class="service">
+    <div class="service-img"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=85" alt="Refrigerator repair service" loading="lazy"><span class="tag">02 • Cooling</span><span class="service-icon"><i class="fa-solid fa-snowflake"></i></span></div>
+    <div class="service-body"><h3>Refrigerator Repair</h3><p>Repair support for refrigerator faults, cooling concerns and component issues.</p><ul class="service-list"><li><i class="fa-solid fa-check"></i> Fault inspection</li><li><i class="fa-solid fa-check"></i> Cooling issue diagnosis</li><li><i class="fa-solid fa-check"></i> Component replacement support</li><li><i class="fa-solid fa-check"></i> Maintenance guidance</li></ul><a class="service-link" href="#contact">Book refrigerator service <i class="fa-solid fa-arrow-right"></i></a></div>
+   </article>
+   <article class="service">
+    <div class="service-img"><img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&w=1000&q=85" alt="Microwave oven service" loading="lazy"><span class="tag">03 • Service</span><span class="service-icon"><i class="fa-solid fa-bolt"></i></span></div>
+    <div class="service-body"><h3>Microwave Oven Repair</h3><p>Technical inspection and repair support for microwave ovens.</p><ul class="service-list"><li><i class="fa-solid fa-check"></i> Technical inspection</li><li><i class="fa-solid fa-check"></i> Fault identification</li><li><i class="fa-solid fa-check"></i> Component fixing support</li><li><i class="fa-solid fa-check"></i> Spare-parts guidance</li></ul><a class="service-link" href="#contact">Book microwave service <i class="fa-solid fa-arrow-right"></i></a></div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section class="section diagnosis">
+ <div class="container diag-grid">
+  <div class="diag-copy reveal">
+   <span class="kicker"><i class="fa-solid fa-microchip"></i> Service Approach</span>
+   <h2>Diagnose first. Explain clearly. Repair properly.</h2>
+   <p>A premium service experience starts before the repair. Share the appliance type and symptoms, get the issue assessed, then confirm the required work before proceeding.</p>
+   <div class="diag-list">
+    <div><i class="fa-solid fa-magnifying-glass"></i> Fault identification</div>
+    <div><i class="fa-solid fa-comments"></i> Clear communication</div>
+    <div><i class="fa-solid fa-screwdriver-wrench"></i> Practical repair</div>
+    <div><i class="fa-solid fa-clipboard-check"></i> Final check</div>
+   </div>
+  </div>
+  <div class="diagnostic-panel reveal">
+   <div class="core"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+   <span class="node n1">DIAGNOSIS</span><span class="node n2">REPAIR</span><span class="node n3">PARTS</span><span class="node n4">FINAL CHECK</span>
+  </div>
+ </div>
+</section>
+
+<section class="section why" id="why">
+ <div class="container why-grid">
+  <div class="copy reveal">
+   <span class="kicker"><i class="fa-solid fa-award"></i> Why Choose S1</span>
+   <h2>Local service, simpler booking.</h2>
+   <p>The experience is designed to reduce friction: select the appliance, explain the issue, share your locality and connect directly through phone or WhatsApp.</p>
+   <a class="btn btn-gold" href="#contact" style="margin-top:22px"><i class="fa-solid fa-calendar-check"></i> Request a Visit</a>
+  </div>
+  <div class="reasons stagger">
+   <article class="reason"><i class="fa-solid fa-location-dot"></i><h3>PCMC Focus</h3><p>Built around Pimpri-Chinchwad and nearby localities for convenient local service requests.</p></article>
+   <article class="reason"><i class="fa-solid fa-house"></i><h3>Doorstep Convenience</h3><p>Share your address/locality and request a home visit for the covered appliance.</p></article>
+   <article class="reason"><i class="fa-solid fa-tags"></i><h3>Clear Visit Charge</h3><p>The provided business detail specifies a ₹249 visit charge; confirm current terms while booking.</p></article>
+   <article class="reason"><i class="fa-solid fa-headset"></i><h3>Direct Contact</h3><p>Call or WhatsApp directly at +91 89835 68587 to discuss the appliance issue.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section areas" id="areas">
+ <div class="container">
+  <div class="section-head reveal">
+   <span class="kicker"><i class="fa-solid fa-map-location-dot"></i> Service Areas</span>
+   <h2>Serving Pimpri-Chinchwad & nearby PCMC localities.</h2>
+   <p>Pimpri Colony is the primary location provided. The areas below are included as nearby service-area targets; exact availability should be confirmed before booking.</p>
+  </div>
+  <div class="area-shell">
+   <div class="area-info reveal">
+    <div class="area-pin"><i class="fa-solid fa-location-dot"></i></div>
+    <h2>Pimpri-Chinchwad, Maharashtra</h2>
+    <p>Request a service by sharing your exact locality. Coverage and technician availability may vary by location and time.</p>
+    <a class="btn btn-green" href="https://wa.me/918983568587?text=Hello%20S1%20Technology%20Services%2C%20please%20confirm%20service%20availability%20in%20my%20area." target="_blank" rel="noopener" style="margin-top:22px"><i class="fa-brands fa-whatsapp"></i> Check My Area</a>
+   </div>
+   <div class="area-chips reveal">
+    <span class="chip">Pimpri Colony</span><span class="chip">Pimpri</span><span class="chip">Chinchwad</span><span class="chip">Akurdi</span><span class="chip">Nigdi</span><span class="chip">Pradhikaran</span><span class="chip">Bhosari</span><span class="chip">Kasarwadi</span><span class="chip">Dapodi</span><span class="chip">Pimple Saudagar</span><span class="chip">Pimple Gurav</span><span class="chip">Sangvi</span><span class="chip">Wakad</span><span class="chip">Thergaon</span><span class="chip">Tathawade</span><span class="chip">Punawale</span><span class="chip">Ravet</span><span class="chip">Moshi</span><span class="chip">Talawade</span><span class="chip">Dehu Road</span><span class="chip">Chikhali</span><span class="chip">Alandi Road</span><span class="chip">Mhalunge</span><span class="chip">Pimple Nilakh</span>
+    <p class="area-note">* Nearby-area list is for service enquiry targeting. Please confirm exact coverage before scheduling a visit.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section process">
+ <div class="container">
+  <div class="section-head reveal">
+   <span class="kicker"><i class="fa-solid fa-route"></i> How It Works</span>
+   <h2>A cleaner four-step service journey.</h2>
+   <p>Everything starts with a quick conversation about your appliance and location.</p>
+  </div>
+  <div class="process-grid stagger">
+   <article class="step"><div class="step-no">01</div><h3>Share the Problem</h3><p>Tell us the appliance, symptoms and your PCMC locality through WhatsApp or phone.</p></article>
+   <article class="step"><div class="step-no">02</div><h3>Book the Visit</h3><p>Confirm service availability and the applicable ₹249 visit charge before the visit.</p></article>
+   <article class="step"><div class="step-no">03</div><h3>Inspection & Repair</h3><p>The appliance is assessed and the required service or repair is discussed.</p></article>
+   <article class="step"><div class="step-no">04</div><h3>Final Check</h3><p>The appliance is checked after the service before the visit is completed.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="contact-shell reveal">
+   <div class="contact-info">
+    <span class="kicker"><i class="fa-solid fa-paper-plane"></i> Book a Service</span>
+    <h2>Need appliance help?</h2>
+    <p>Send your details and appliance problem. Your enquiry will open directly in WhatsApp for faster communication.</p>
+    <ul class="contact-points">
+     <li><i class="fa-solid fa-phone"></i><span><strong>+91 89835 68587</strong><br>Call or WhatsApp</span></li>
+     <li><i class="fa-solid fa-location-dot"></i><span><strong>Pimpri-Chinchwad</strong><br>Pimpri Colony & nearby PCMC areas</span></li>
+     <li><i class="fa-solid fa-indian-rupee-sign"></i><span><strong>Visit Charge: ₹249</strong><br>Confirm current applicable charges before booking.</span></li>
+     <li><i class="fa-solid fa-wrench"></i><span><strong>Core Appliances</strong><br>Washing machine • Refrigerator • Microwave oven</span></li>
+    </ul>
+   </div>
+   <div class="contact-form">
+    <div class="form-head"><h3>Request a Service</h3><p>Fill the form — we’ll prepare a WhatsApp enquiry for you.</p></div>
+    <form id="contactForm">
+     <div class="form-grid">
+      <div class="field"><label for="name">Your Name</label><input id="name" name="name" required placeholder="Enter your name"></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required inputmode="tel" placeholder="Enter mobile number"></div>
+      <div class="field"><label for="appliance">Appliance</label><select id="appliance" name="appliance" required><option value="">Select appliance</option><option>Washing Machine</option><option>Refrigerator</option><option>Microwave Oven</option></select></div>
+      <div class="field"><label for="service">Service Needed</label><select id="service" name="service" required><option value="">Select service</option><option>Repair / Breakdown</option><option>Home Visit & Diagnosis</option><option>Maintenance</option><option>Parts / Component Support</option><option>Other Enquiry</option></select></div>
+      <div class="field full"><label for="location">Area / Locality</label><input id="location" name="location" required placeholder="e.g. Pimpri Colony"></div>
+      <div class="field full"><label for="message">Problem Details</label><textarea id="message" name="message" placeholder="Tell us what is happening with your appliance..."></textarea></div>
+     </div>
+     <button class="btn btn-green submit" type="submit"><i class="fa-brands fa-whatsapp"></i> Send Enquiry on WhatsApp</button>
+     <p class="form-note">No online payment is collected through this form.</p>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section faq">
+ <div class="container">
+  <div class="section-head reveal"><span class="kicker"><i class="fa-solid fa-circle-question"></i> FAQ</span><h2>Questions before you book?</h2><p>Quick answers based on the service details supplied for S1 Technology Services.</p></div>
+  <div class="faq-grid reveal">
+   <div class="faq-item"><button class="faq-q">Which appliances do you repair? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">The supplied service details cover washing machines, refrigerators and microwave ovens. For any other appliance, contact S1 Technology Services to confirm.</div></div>
+   <div class="faq-item"><button class="faq-q">What is the visit charge? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">The provided business detail specifies a ₹249 visit charge. Confirm the current applicable charge and service terms before booking.</div></div>
+   <div class="faq-item"><button class="faq-q">Do you provide doorstep service? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">The website is structured for home/doorstep service requests in Pimpri-Chinchwad. Exact availability depends on locality and technician availability.</div></div>
+   <div class="faq-item"><button class="faq-q">Which areas are covered? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">Pimpri Colony and major nearby PCMC localities are listed on this page. Please send your exact locality on WhatsApp to confirm coverage.</div></div>
+   <div class="faq-item"><button class="faq-q">How do I book a service? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">Use the booking form, WhatsApp button or call +91 89835 68587. Share the appliance, problem and locality so the service requirement can be discussed.</div></div>
+   <div class="faq-item"><button class="faq-q">Are parts included in the visit charge? <i class="fa-solid fa-chevron-down"></i></button><div class="faq-a">The supplied details do not specify that parts are included. Parts, labour and other applicable charges should be confirmed after inspection.</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta-section">
+ <div class="container">
+  <div class="cta reveal">
+   <span class="kicker"><i class="fa-solid fa-screwdriver-wrench"></i> S1 TECHNOLOGY SERVICES</span>
+   <h2>Your appliance issue deserves a clear next step.</h2>
+   <p>Washing machine, refrigerator or microwave oven — share the problem, locality and preferred contact method and request a service visit.</p>
+   <div class="cta-actions">
+    <a class="btn btn-gold" href="https://wa.me/918983568587?text=Hello%20S1%20Technology%20Services%2C%20I%20need%20home%20appliance%20service." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+    <a class="btn btn-outline" href="tel:+918983568587"><i class="fa-solid fa-phone"></i> Call +91 89835 68587</a>
+    <a class="btn btn-outline" href="#contact"><i class="fa-solid fa-calendar-check"></i> Book a Visit</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <h3>S1 Technology Services</h3>
+    <p>Premium-style home appliance service website for doorstep repair enquiries in Pimpri-Chinchwad, Maharashtra.</p>
+    <a class="btn btn-gold" href="tel:+918983568587"><i class="fa-solid fa-phone"></i> +91 89835 68587</a>
+    <div class="socials"><a href="https://wa.me/918983568587" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="tel:+918983568587" aria-label="Call"><i class="fa-solid fa-phone"></i></a></div>
+   </div>
+   <div><div class="footer-title">Services</div><ul class="footer-links"><li><a href="#services">Washing Machine</a></li><li><a href="#services">Refrigerator</a></li><li><a href="#services">Microwave Oven</a></li><li><a href="#services">Home Visit</a></li><li><a href="#services">Maintenance</a></li><li><a href="#services">Parts Support</a></li></ul></div>
+   <div><div class="footer-title">Explore</div><ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#areas">Areas</a></li><li><a href="#why">Why Us</a></li><li><a href="#contact">Contact</a></li><li><a href="#contact">Book Service</a></li></ul></div>
+   <div><div class="footer-title">Service Area</div><ul class="footer-links"><li><span>Pimpri Colony</span></li><li><span>Pimpri-Chinchwad</span></li><li><span>PCMC & nearby areas</span></li><li><span>Maharashtra, India</span></li><li><a href="tel:+918983568587">+91 89835 68587</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 S1 Technology Services. All Rights Reserved.</span><span>Home Appliance Repair • Pimpri-Chinchwad</span></div>
+ </div>
+</footer>
+
+<div class="floating">
+ <a class="float-btn wa" href="https://wa.me/918983568587?text=Hello%20S1%20Technology%20Services%2C%20I%20need%20appliance%20service." target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+ <a class="float-btn call" href="tel:+918983568587" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+</div>
+
+<script>
+(function(){
+ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+ const nav=$("#navbar"),menu=$("#menu"),navLinks=$("#navLinks");
+ window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>30),{passive:true});
+ menu.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));});
+ window.addEventListener("resize",()=>{if(innerWidth>760){navLinks.classList.remove("open");menu.setAttribute("aria-expanded","false")}}, {passive:true});
+ $$("#navLinks a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menu.setAttribute("aria-expanded","false")}));
+ const sections=$$("section[id]"),links=$$("#navLinks a[href^='#']");
+ const so=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;links.forEach(a=>a.classList.remove("active"));const a=links.find(x=>x.getAttribute("href")==="#"+e.target.id);if(a)a.classList.add("active")}),{rootMargin:"-35% 0px -55% 0px"});
+ sections.forEach(s=>so.observe(s));
+ const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("active");ro.unobserve(e.target)}}),{threshold:.08});
+ $$(".reveal,.stagger").forEach(el=>ro.observe(el));
+ $$(".faq-q").forEach(q=>q.addEventListener("click",()=>{const item=q.parentElement;$$(".faq-item").forEach(x=>{if(x!==item)x.classList.remove("open")});item.classList.toggle("open")}));
+ const form=$("#contactForm");
+ form.addEventListener("submit",e=>{
+   e.preventDefault();
+   const d=new FormData(form);
+   const text=`Hello S1 Technology Services,
+
+I would like to book a home appliance service.
+
+Name: ${d.get("name")}
+Phone: ${d.get("phone")}
+Appliance: ${d.get("appliance")}
+Service: ${d.get("service")}
+Area / Locality: ${d.get("location")}
+Problem Details: ${d.get("message")||"Not provided"}
+Visit Charge: ₹249 (please confirm current applicable charge)`;
+   window.open("https://wa.me/918983568587?text="+encodeURIComponent(text),"_blank");
+ });
+})();
+</script>
+</body>
+</html>
